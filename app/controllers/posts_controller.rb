@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
 
+  def index
+    @prompt = Prompt.find(params[:prompt_id])
+    @posts = @prompt.posts.all
+    @count = 1
+  end
+
   def new
     @prompt = Prompt.find(params[:prompt_id])
     @post = @prompt.posts.new
@@ -8,6 +14,7 @@ class PostsController < ApplicationController
   def create
     @prompt = Prompt.find(params[:prompt_id])
     @post = @prompt.posts.create(post_params)
+    redirect_to prompt_posts_path(@prompt)
   end
 
   private

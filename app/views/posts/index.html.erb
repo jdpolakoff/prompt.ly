@@ -1,0 +1,30 @@
+<h1> Entries for <%= link_to @prompt.title, prompt_path(@prompt) %> </h1>
+
+<img src ="<%= @prompt.img_url %>" class="prompt_img2">
+
+
+<% @posts.each do |post| %>
+
+<div class ="all_post_links">
+
+    <h2> Post <%= @count %>: </h2>
+
+    <div class="post_title_body" style="background-image: url(<%= @prompt.img_url %>)">
+
+      <div class="post_text">
+
+        <h2><%= post.title.upcase %></h2>
+
+        <p><%= post.body %></p>
+
+    <p class ="published_at"> Published at: <%= post.created_at %></p>
+
+      </div>
+
+    </div>
+
+    <% @count+=1 %>
+
+</div>
+
+<% end %>

@@ -6,7 +6,9 @@
 
 <nav class = "prompt_buttons">
 
-  <%= link_to "Select this prompt", new_prompt_post_path(@prompt) %> 
+  <%= link_to "I'm feeling this prompt.", new_prompt_post_path(@prompt) %>
+
+  <h3><%= link_to "Click-through to read all entries for this prompt", prompt_posts_path(@prompt) %></h3>
 
 
 </nav>

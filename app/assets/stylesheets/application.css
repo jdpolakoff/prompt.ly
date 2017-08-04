@@ -26,6 +26,27 @@ body {
 }
 
 
+.post_title_body {
+
+  padding: 0.5px;
+  border-radius: 15px;
+  width: 40%;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%
+
+}
+
+
+.post_text {
+
+  background-color: white;
+  opacity: .9;
+  border-radius: 15px;
+  padding: -10px;
+
+}
+
 .prompt_img {
 
   height: 300px;
@@ -101,5 +122,11 @@ input#post_title {
 
   display: inline-block;
   align-items: center;
+
+}
+
+.published_at {
+
+  font-size: 12px;
 
 }
