@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+
+body {
+
+  text-align: center;
+  font-family: 'Inconsolata', monospace
+
+}
+
+
+.prompt_img {
+
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+
+}

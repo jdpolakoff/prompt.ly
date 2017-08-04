@@ -1,0 +1,12 @@
+<h1> <%= @prompt.title %> </h1>
+
+<img src ="<%= @prompt.img_url %>" class="prompt_img">
+
+<h3> <%= @prompt.prompt %> </h3>
+
+<nav class = "prompt_buttons">
+
+  <%= link_to "Select this prompt", new_prompt_post_path(@prompt) %> 
+
+
+</nav>
