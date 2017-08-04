@@ -2,13 +2,19 @@
 
 <img src ="<%= @prompt.img_url %>" class="prompt_img">
 
-<h3> <%= @prompt.prompt %> </h3>
+<div class ="prompt">
+
+  <h3> <%= @prompt.prompt %> </h3>
+
+</div>
 
 <nav class = "prompt_buttons">
 
-  <%= link_to "I'm feeling this prompt.", new_prompt_post_path(@prompt) %>
+  <h3><%= link_to "I'm feeling this prompt. Let's go!", new_prompt_post_path(@prompt) %></h3>
 
-  <h3><%= link_to "Click-through to read all entries for this prompt", prompt_posts_path(@prompt) %></h3>
+  <h3><%= link_to "Next!", prompt_path(@random_prompt) %></h3>
+
+  <h3><%= link_to "Read all entries for this prompt.", prompt_posts_path(@prompt) %></h3>
 
 
 </nav>

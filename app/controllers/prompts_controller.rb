@@ -6,6 +6,7 @@ class PromptsController < ApplicationController
 
   def show
     @prompt = Prompt.find(params[:id])
-  end 
+    @random_prompt = Prompt.all.sample
+  end
 
 end
