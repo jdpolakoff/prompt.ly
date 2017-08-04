@@ -54,15 +54,24 @@ textarea#post_body{
   height: 200px;
   width: 400px;
   border-radius: 10px;
-  outline-width: 0
+  outline-width: 0;
+  text-align: center
+
 
 }
 
 input {
 
   border-radius: 10px;
-  outline-width: 0
+  outline-width: 0;
+  font-family: 'Inconsolata', monospace;
+  text-align: center
 
+}
+
+input#post_title {
+
+  width: 400px;
 
 }
 
@@ -75,8 +84,22 @@ input {
 
 .thumbnail {
 
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+
+}
+
+.prompt_links {
+
+  display: inline-block;
+  text-align: center;
+
+}
+
+.all_prompt_links {
+
+  display: inline-block;
+  align-items: center;
 
 }
