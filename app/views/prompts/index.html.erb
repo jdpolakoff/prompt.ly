@@ -1,5 +1,5 @@
 <h1> All Prompts </h1>
 
 <% @prompts.each do |prompt| %>
-  <%= link_to prompt.title, prompt_path(prompt)%><br><br>
+  <img src ="<%= prompt.img_url %>" class="thumbnail"><%= link_to prompt.title, prompt_path(prompt)%><br><br>
 <% end %>

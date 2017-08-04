@@ -34,11 +34,49 @@ body {
 
 }
 
+.prompt_img2 {
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+}
+
 
 .welcome_img {
 
   height: 300px;
   width: 300px;
   border-radius:300px;
+
+}
+
+textarea#post_body{
+
+  height: 200px;
+  width: 400px;
+  border-radius: 10px;
+  outline-width: 0
+
+}
+
+input {
+
+  border-radius: 10px;
+  outline-width: 0
+
+
+}
+
+.post_body {
+
+  display: inline-block;
+  vertical-align: middle;
+
+}
+
+.thumbnail {
+
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
 
 }

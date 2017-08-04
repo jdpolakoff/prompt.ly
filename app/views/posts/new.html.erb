@@ -1,0 +1,25 @@
+<h1> Here's your prompt: <%= @prompt.title %> </h1>
+<img src ="<%= @prompt.img_url %>" class="prompt_img2">
+<h3> <%= @prompt.prompt %> </h3>
+
+
+
+<%= form_for [@prompt, @post] do |f| %>
+
+  <%= f.label :title %>:
+  <%= f.text_field :title %>
+
+  <br><br>
+
+<div class ="post_body">
+
+  <%= f.label :body %>:
+  <%= f.text_area :body%>
+
+</div>
+
+  <br><br>
+
+  <%= f.submit %>
+
+<% end %>
