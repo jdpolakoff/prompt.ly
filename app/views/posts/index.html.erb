@@ -1,6 +1,8 @@
 <h1> Entries for <%= link_to @prompt.title, prompt_path(@prompt) %> </h1>
 
-<img src ="<%= @prompt.img_url %>" class="prompt_img2">
+  <div class ="main_image" style = "background-image: url(<%= @prompt.img_url %>)">
+
+  </div>
 
 
 <% @posts.each do |post| %>

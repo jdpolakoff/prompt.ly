@@ -18,6 +18,15 @@ class PromptsController < ApplicationController
     redirect_to prompts_path
   end
 
+  def edit
+    @prompt = Prompt.find(params[:id])
+  end
+
+  def update
+    @prompt = Prompt.find(params[:id])
+    @prompt.update(prompt_params)
+    redirect_to @prompt
+  end
 
   private
   def prompt_params

@@ -130,18 +130,25 @@ footer {
 
 }
 
-.prompt_img {
+.main_image1 {
 
   height: 300px;
   width: 300px;
   border-radius: 300px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 
 }
 
-.prompt_img2 {
+.main_image {
   height: 150px;
   width: 150px;
   border-radius: 150px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+
 }
 
 .prompt {
