@@ -24,6 +24,24 @@ class PostsController < ApplicationController
     @comment = @post.comments.new
   end
 
+  def edit
+    @prompt = Prompt.find(params[:prompt_id])
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @prompt = Prompt.find(params[:prompt_id])
+    @post = Post.find(params[:id])
+    @post.update(post_params)
+    redirect_to prompt_post_path(@prompt)
+  end
+
+  def destroy
+    @prompt = Prompt.find(params[:prompt_id])
+    @post = Post.find(params[:id])
+    @post.destroy
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :body)

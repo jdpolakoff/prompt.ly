@@ -28,6 +28,12 @@ class PromptsController < ApplicationController
     redirect_to @prompt
   end
 
+  def destroy
+    @prompt = Prompt.find(params[:id])
+    @prompt.destroy
+    redirect_to prompts_path
+  end 
+
   private
   def prompt_params
     params.require(:prompt).permit(:title, :prompt, :img_url)

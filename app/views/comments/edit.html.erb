@@ -1,12 +1,22 @@
-<h1> Make new comment </h1>
+<h1> Edit this comment </h1>
 
-<%= form_for [@prompt, @post, @comment] do |f| %>
+<%= form_for [@post, @comment] do |f| %>
 
-  <%= f.label "Comment" %>:
-  <%= f.text_field :comment %><br />
+<div class ="edit_prompt">
+
+  <%= f.label "Edit comment" %>:<br>
+  <%= f.text_area :comment %><br><br>
+
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
 
   <br>
 
-  <%= f.submit %>
+  <%= form_for [@post, @comment], method: :delete do |f| %>
+
+    <%= f.submit "Delete this comment", class: 'button'%>
 
   <% end %>

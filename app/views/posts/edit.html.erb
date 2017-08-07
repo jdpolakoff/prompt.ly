@@ -1,0 +1,41 @@
+<h2> Edit or delete this post for <%= link_to @prompt.title, prompt_path(@prompt) %> </h2>
+
+<div class="post_title_body" style="background-image: url(<%= @prompt.img_url %>); background-size: cover">
+
+  <div class="post_text">
+
+    <h3><%= @post.title.upcase %></h3>
+
+    <p><%= @post.body %></p>
+
+    <p class ="published_at"> Published at: <%= @post.created_at %></p>
+
+  </div>
+
+</div>
+
+<br>
+
+<%= form_for [@prompt, @post] do |f| %>
+
+  <%= f.label "Edit title" %>:<br>
+  <%= f.text_field :title %><br><br>
+
+  <div class ="create_prompt">
+
+  <%= f.label "Edit post" %>:<br>
+  <%= f.text_area :body %><br><br>
+
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
+
+  <br>
+
+  <%= form_for [@prompt, @post], method: :delete do |f| %>
+
+    <%= f.submit "Delete this post", class: 'button'%>
+
+  <% end %>

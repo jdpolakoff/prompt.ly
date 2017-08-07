@@ -21,7 +21,8 @@
 
         <p class ="published_at"> Published at: <%= post.created_at %></p>
 
-        <p style ="font-size: 10"> <%= link_to "Comment on this post", prompt_post_path(@prompt, post) %></p>
+        <p style ="font-size: 10"> <%= link_to "Comment on this post", prompt_post_path(@prompt, post) %>
+        <%= link_to "Edit or delete this post", edit_prompt_post_path(@prompt, post)%></p>
 
         <% @count+=1 %>
 
