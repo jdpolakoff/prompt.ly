@@ -21,6 +21,7 @@ class PostsController < ApplicationController
     @prompt = Prompt.find(params[:prompt_id])
     @post = Post.find(params[:id])
     @comments = @post.comments.all
+    @comment = @post.comments.new
   end
 
   private

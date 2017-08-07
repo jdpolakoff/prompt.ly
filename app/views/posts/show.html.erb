@@ -1,4 +1,4 @@
-<h2> Comment on this post for "<%= @prompt.title %>" </h2>
+<h2> Comment on this post for <%= link_to @prompt.title, prompt_path(@prompt) %> </h2>
 
 <div class="post_title_body" style="background-image: url(<%= @prompt.img_url %>)">
 
@@ -16,18 +16,33 @@
 
   <br>
 
-  <h2> Comments </h2>
+  <h1> Post new comment </h1>
 
-  <% @comments.each do |comment| %>
+  <%= form_for [@post, @comment] do |f| %>
 
-    <%= comment.comment %>
+  <div class ="post_body">
 
-    <%= comment.created_at %>
+    <%= f.label "Comment" %>:<br><br>
+    <%= f.text_area :comment %><br><br>
+
+  </div>
+
+    <br>
+
+    <%= f.submit %> <br><br>
 
     <% end %>
 
-    <div class ="comment">
+  <% @comments.each do |comment| %>
 
-      <%= link_to "Post new comment", new_post_comment_path(@post) %>
+    <div class ="all_comment">
+
+        <p class ="comment_time" style ="background-image: url(<%= @prompt.img_url %>)"> Posted at: <%= comment.created_at %></p>
+
+        <p><%= comment.comment %><br></p>
 
     </div>
+
+    <br><br>
+
+    <% end %>

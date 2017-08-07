@@ -38,6 +38,29 @@ body {
 }
 
 
+.all_comment {
+
+  width: 40%;
+  margin: 0 auto;
+  border-style: solid;
+  border-radius: 10px;
+  border-radius: 10px;
+  border-color: black;
+  border-width: thin;
+
+
+}
+
+
+.comment_time {
+
+  margin-top: 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+
 .post_text {
 
   background-color: white;
@@ -85,6 +108,16 @@ textarea#post_body{
   outline-width: 0;
   text-align: center
 
+
+}
+
+textarea#comment_comment{
+
+  height: 50px;
+  width: 350px;
+  border-radius: 10px;
+  outline-width: 0;
+  text-align: center
 
 }
 
