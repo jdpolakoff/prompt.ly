@@ -40,6 +40,7 @@ class PostsController < ApplicationController
     @prompt = Prompt.find(params[:prompt_id])
     @post = Post.find(params[:id])
     @post.destroy
+    redirect_to prompt_posts_path
   end
 
   private
