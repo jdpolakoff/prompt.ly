@@ -1,0 +1,12 @@
+<h1> Make new comment </h1>
+
+<%= form_for [@prompt, @post, @comment] do |f| %>
+
+  <%= f.label "Comment" %>:
+  <%= f.text_field :comment %><br />
+
+  <br>
+
+  <%= f.submit %>
+
+  <% end %>

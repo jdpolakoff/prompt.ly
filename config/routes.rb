@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   resources :prompts do
     resources :posts
-  end
+    end
 
-
+    resources :posts do
+      resources :comments
+    end
 
 end

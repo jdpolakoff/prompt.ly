@@ -17,6 +17,11 @@ class PostsController < ApplicationController
     redirect_to prompt_posts_path(@prompt)
   end
 
+  def show
+    @prompt = Prompt.find(params[:prompt_id])
+    @post = Post.find(params[:id])
+  end
+
   private
   def post_params
     params.require(:post).permit(:title, :body)
