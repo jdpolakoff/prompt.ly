@@ -7,8 +7,9 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @post.comment.create(comment_params)
-    redirect_to prompt_post_comments
+    @prompt = @post.prompt
+    @comment = @post.comments.create(comment_params)
+    redirect_to prompt_post_path(@prompt, @post)
   end
 
 

@@ -16,6 +16,16 @@
 
   <br>
 
+  <h2> Comments </h2>
+
+  <% @comments.each do |comment| %>
+
+    <%= comment.comment %>
+
+    <%= comment.created_at %>
+
+    <% end %>
+
     <div class ="comment">
 
       <%= link_to "Post new comment", new_post_comment_path(@post) %>

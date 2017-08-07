@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   def show
     @prompt = Prompt.find(params[:prompt_id])
     @post = Post.find(params[:id])
+    @comments = @post.comments.all
   end
 
   private

@@ -79,7 +79,7 @@ body {
 
 textarea#post_body{
 
-  height: 200px;
+  height: 100px;
   width: 400px;
   border-radius: 10px;
   outline-width: 0;
