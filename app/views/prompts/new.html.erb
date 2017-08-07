@@ -1,0 +1,22 @@
+<h1> Make a new prompt </h1>
+
+<%= form_for [@prompt] do |f| %>
+
+  <%= f.label "Title" %>:<br>
+  <%= f.text_field :title %><br><br>
+
+  <div class ="create_prompt">
+
+  <%= f.label "Prompt" %>:<br>
+  <%= f.text_area :prompt %><br><br>
+
+  </div>
+
+  <%= f.label "Image URL" %>:<br>
+  <%= f.text_field :img_url %><br><br>
+
+  <br>
+
+  <%= f.submit %>
+
+  <% end %>

@@ -15,8 +15,11 @@
       <nav class ="footer">
         <div class ="foot_text">
           <h3>WHERE TO?</h3>
-            <h4><%= link_to "Home", root_path %> </h4>
-            <h4> <%= link_to "All Prompts", prompts_path %> <h4>
+            <ul>
+              <li><h4><%= link_to "Home", root_path %> </h4></li>
+              <li><h4> <%= link_to "All Prompts", prompts_path %> <h4></li>
+              <li><h4> <%= link_to "Create a new prompt", new_prompt_path %> <h4></li>
+            </ul>
         <div>
       </nav>
     </footer>
