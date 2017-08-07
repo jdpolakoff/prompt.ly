@@ -26,6 +26,21 @@ body {
 }
 
 
+.footer {
+
+  height: 10%;
+  width: 80%;
+  background-image: url("https://static.pexels.com/photos/34085/pexels-photo.jpg");
+  background-size: cover;
+  border-radius: 10px;
+  bottom: 0px;
+  /*padding-top: 1px;*/
+  opacity: .7;
+  margin: 0 auto;
+  margin-top: 4%;
+
+}
+
 .post_title_body {
 
   padding: 0.5px;
@@ -61,12 +76,23 @@ body {
 }
 
 
-.post_text {
+.post_text{
 
   background-color: white;
   opacity: .9;
   border-radius: 15px;
   padding: -10px;
+
+}
+
+.foot_text {
+
+    background-color: white;
+    opacity: .9;
+    border-radius: 15px;
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%
 
 }
 
