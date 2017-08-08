@@ -256,20 +256,24 @@ input#prompt_img_url {
 .prompt_links {
 
   display: inline;
-  text-align: center;
   float: left;
-  width: 100px;
+  margin: 10px;
   border: solid 1px black;
   border-radius: 10px;
-  background: #e6e8ed;
-  padding: 1px;
+  padding: 5px;
+  width: 100px;
+  background: #edeeef;
+  vertical-align: text-top;
 
 }
 
 .all_prompt_links {
 
-  width: 500px;
-  margin: 0 auto;
+  width: 600px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 
