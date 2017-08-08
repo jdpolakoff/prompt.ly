@@ -42,7 +42,6 @@ body {
   width: 800px;
   margin: 0 auto;
   padding-top: 45px;
-  z-index: 1
 
 }
 
@@ -52,7 +51,6 @@ header {
   width: 100%;
   top: 0;
   min-height: 30px;
-  z-index: 3;
 
 }
 
@@ -62,10 +60,26 @@ header h3 {
   float: left;
   padding: 10px;
   display: inline-block;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100px;
+  margin: 10px;
+  background: #edeeef;
 
 }
 
+header h3:hover {
 
+  background: #ff115c
+
+}
+
+.prompt_show:hover {
+
+  background: #ff115c
+
+}
 
 .post_title_body {
 
@@ -241,20 +255,49 @@ input#prompt_img_url {
 
 .prompt_links {
 
-  display: inline-block;
+  display: inline;
   text-align: center;
+  float: left;
+  width: 100px;
+  border: solid 1px black;
+  border-radius: 10px;
+  background: #e6e8ed;
+  padding: 1px;
 
 }
 
 .all_prompt_links {
 
-  display: inline-block;
-  align-items: center;
+  width: 500px;
+  margin: 0 auto;
 
 }
 
 .published_at {
 
   font-size: 12px;
+
+}
+
+.prompt_buttons {
+
+  width: 600px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.prompt_show {
+
+  display: block;
+  float: left;
+  margin: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100px;
+  background: #edeeef;
 
 }
