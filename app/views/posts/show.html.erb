@@ -8,7 +8,7 @@
 
     <p><%= @post.body %></p>
 
-    <p class ="published_at"> Published at: <%= @post.created_at %></p>
+    <p class ="published_at"> Published by: <%= @post.user %> at: <%= @post.created_at %></p>
 
   </div>
 
@@ -37,7 +37,7 @@
 
     <div class ="all_comment">
 
-        <p class ="comment_time" style ="background-image: url(<%= @prompt.img_url %>); background-size: cover"> Posted at: <%= comment.created_at %></p>
+        <p class ="comment_time" style ="background-color: #77f442"> Posted at: <%= comment.created_at %></p>
 
         <p><%= comment.comment %><br></p>
 
