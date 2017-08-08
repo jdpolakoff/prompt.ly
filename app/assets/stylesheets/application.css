@@ -41,7 +41,7 @@ body {
 
   width: 800px;
   margin: 0 auto;
-  padding-top: 45px;
+  margin-top: 85px;
 
 }
 
@@ -76,6 +76,12 @@ header h3:hover {
 }
 
 .prompt_show:hover {
+
+  background: #ff115c
+
+}
+
+.prompt_links:hover {
 
   background: #ff115c
 
@@ -167,7 +173,6 @@ header h3:hover {
 
   width: 50%;
   margin: 0 auto;
-
 
 }
 
@@ -269,9 +274,13 @@ input#prompt_img_url {
 
 .all_prompt_links {
 
-  width: 600px;
-  display: block;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
+  justify-content: center;
+  flex-flow: row wrap;
   margin-left: auto;
   margin-right: auto;
 
