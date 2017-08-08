@@ -18,13 +18,19 @@
             <div class ="header_h3"><h3><%= link_to "Sign In", new_user_session_path %></h3></div>
           <% else %>
             <div class ="header_h3"><h3><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></h3></div>
-            <p style="float:right; margin-right: 5px">Currently logged in as:<br> <%= current_user.email %></p>
-            <% end %>
+            <p style="float:right; margin-right: 5px; color: white">Currently logged in as:<br> <%= current_user.email %></p>
+          <% end %>
         </header>
-    <div class="page_wrap">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
+
+        <div class="page_wrap">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <%= yield %>
+        </div>
+
+        <!-- <footer>
+          <div class ="header_h3"><h3> Created by Prompt.ly Enterprises LLC </h3></div>
+        </footer> -->
+
   </body>
 </html>

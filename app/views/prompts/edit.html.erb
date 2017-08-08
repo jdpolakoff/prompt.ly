@@ -1,5 +1,5 @@
 
-<h1> Edit or delete <%= @prompt.title %> </h1>
+<h1> Edit or delete <%= link_to @prompt.title, prompt_path(@prompt), class: 'welcome_text' %> </h1>
 
 <div class ="main_image" style = "background-image: url(<%= @prompt.img_url %>)">
 
