@@ -190,6 +190,12 @@ footer {
 
 }
 
+.like_block {
+
+    vertical-align: center;
+
+}
+
 
 .prompt_show:hover {
 
@@ -208,6 +214,14 @@ footer {
   width: 80%;
 
 }
+
+.upvote, .downvote {
+
+  height: 10%;
+  bottom: 0;
+
+}
+
 
 
 .post_title_body {
@@ -272,6 +286,10 @@ footer {
   opacity: .9;
   border-radius: 15px;
   padding: -10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 
 }
 

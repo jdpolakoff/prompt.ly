@@ -9,9 +9,23 @@
 
 <div class ="all_post_links">
 
-    <h2> Post <%= @count %>: </h2>
+    <div class="upvote" style="float: left; margin-top: 5%; margin-left: 5%">
 
-    <div class="post_title_body2" style="background-image: url(<%= @prompt.img_url %>); background-size: cover">
+    <%= link_to like_post_path(post), class: 'like', method: :put do %>
+    <%= image_tag "upvote.png"%><h2><%= post.get_upvotes.size %></h2>
+    <% end %>
+
+    </div>
+
+    <div class="downvote" style="float: right; margin-top: 5%; margin-right: 5%">
+
+      <%= link_to unlike_post_path(post), class: 'like', method: :put do %>
+      <%= image_tag "downvote.png"%><h2><%= post.get_downvotes.size %></h2>
+      <% end %>
+
+    </div>
+
+    <div class="post_title_body2" style="background-image: url(<%= @prompt.img_url %>); background-size: cover; margin-top: 15px">
 
       <div class="post_text">
 

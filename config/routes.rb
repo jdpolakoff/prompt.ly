@@ -14,6 +14,13 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :posts do
+    member do
+      put "like" => 'posts#upvote'
+      put "unlike" => 'posts#downvote'
+    end
+  end
+  
     resources :posts do
       resources :comments
     end
