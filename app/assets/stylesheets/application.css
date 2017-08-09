@@ -139,13 +139,14 @@ header {
   text-align: center;
   justify-content: center;
   flex-flow: row wrap;
-  background-color: #edddbb;
+  /*background-image: url("http://i.imgur.com/sXFe4sH.jpg");
+  background-size: cover;*/
+  /*background-color: #edddbb;*/
   /*background-color: #e8ab27;*/
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   min-height: 9%;
   z-index: 3;
-  opacity: .9
 
 }
 
