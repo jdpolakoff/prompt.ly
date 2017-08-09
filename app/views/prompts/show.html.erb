@@ -1,10 +1,21 @@
 <div class="prompt">
 
-<h1> <%= @prompt.title %> </h1>
+      <h1> <%= @prompt.title %> </h1><br>
+
+          <%= link_to like_prompt_path(@prompt), class: 'like2', method: :put do %>
+            <div class="like_button"><%= image_tag "upvote.png"%></div>
+            <div class="like_number"><h2><%= @prompt.get_upvotes.size %></h2></div>
+            <% end %>
+
+            <br>
+
+          <%= link_to unlike_prompt_path(@prompt), class: 'like2', method: :put do %>
+            <div class="unlike_button"><%= image_tag "downvote.png"%></div><div class="unlike_number"><h2><%= @prompt.get_downvotes.size %></h2></div>
+            <% end %>
 
   <div class ="main_image1" style = "background-image: url(<%= @prompt.img_url %>)"></div>
 
-  <div> <h3> <%= @prompt.prompt %> <br><br> - Submitted by <%= @prompt.user.email %> </h3> </div>
+  <div> <h3> <%= @prompt.prompt %> <br><br> - Submitted by <%= @prompt.user.email %> </h3></div>
 
 <nav class = "prompt_buttons">
 

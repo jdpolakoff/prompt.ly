@@ -51,13 +51,13 @@ class PromptsController < ApplicationController
   def upvote
     @prompt = Prompt.find(params[:id])
     @prompt.upvote_from current_user
-    redirect_to prompts_path
+    redirect_back(fallback_location: root_path)
   end
 
   def downvote
     @prompt = Prompt.find(params[:id])
     @prompt.downvote_from current_user
-    redirect_to prompts_path
+    redirect_back(fallback_location: root_path)
   end
 
   private

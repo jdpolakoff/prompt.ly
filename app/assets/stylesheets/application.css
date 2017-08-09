@@ -294,6 +294,12 @@ footer {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+  margin-top: -10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 
 }
 
@@ -368,6 +374,12 @@ textarea#prompt_prompt{
 
 }
 
+.like2 {
+
+  float: right;
+
+}
+
 .like_button {
 
   height: 30px;
@@ -387,6 +399,13 @@ textarea#prompt_prompt{
   margin-top: -23px
 
 }
+
+.title_vote {
+
+  display: inline;
+
+}
+
 input {
 
   /*border-radius: 10px;*/
@@ -469,12 +488,18 @@ input#prompt_img_url {
 
 .prompt_buttons {
 
-  width: 600px;
+  /*width: 600px;*/
   display: block;
   text-align: center;
   /*margin-left: auto;
   margin-right: auto;*/
   margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-flow: row wrap;
 
 }
 
