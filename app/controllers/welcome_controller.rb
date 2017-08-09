@@ -4,4 +4,8 @@ class WelcomeController < ApplicationController
     @prompt = Prompt.all.sample
   end
 
+  def show
+    render template: '/welcome/about'
+  end
+
 end

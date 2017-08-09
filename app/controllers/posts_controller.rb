@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @prompt = Prompt.find(params[:prompt_id])
-    @posts = @prompt.posts.all
+    @posts = @prompt.posts.all.order(:cached_votes_score => :desc)
     @count = 1
   end
 

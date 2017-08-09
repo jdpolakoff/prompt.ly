@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'welcome#index'
 
+   get '/welcome/about' => 'welcome#show'
+
   resources :prompts do
     resources :posts
     end
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
       put "unlike" => 'posts#downvote'
     end
   end
-  
+
     resources :posts do
       resources :comments
     end
