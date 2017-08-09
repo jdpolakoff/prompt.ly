@@ -4,6 +4,11 @@
 
   </div>
 
+<% if @posts.length < 1 %>
+
+<h3> No posts yet. <%= link_to "Be the first.", new_prompt_post_path(@prompt) %> </h3>
+
+<% else %>
 
 <% @posts.each do |post| %>
 
@@ -33,17 +38,19 @@
 
         <p><%= post.body %></p>
 
+        <div>
+
         <p class ="published_at"> Published by <%= post.user.email %> at <%= post.created_at %></p>
 
         <p style ="font-size: 10"> <%= link_to "Comment on this post / View comments", prompt_post_path(@prompt, post), class: "welcome_text" %></p>
         <p style ="font-size: 10"><%= link_to "Edit or delete this post", edit_prompt_post_path(@prompt, post), class: "welcome_text" %></p>
 
-        <% @count+=1 %>
+      </div>
 
       </div>
 
     </div>
-
+    <% end  %>
 </div>
 
 <% end %>
