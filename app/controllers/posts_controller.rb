@@ -13,8 +13,13 @@ class PostsController < ApplicationController
 
   def create
     @prompt = Prompt.find(params[:prompt_id])
-    @post = @prompt.posts.create(post_params.merge(user: current_user))
-    redirect_to prompt_posts_path(@prompt)
+    if user_signed_in?
+      @post = @prompt.posts.create(post_params.merge(user: current_user))
+      redirect_to prompt_posts_path(@prompt)
+    else
+      flash[:alert] = "Please sign in to post!"
+      redirect_to new_prompt_post_path(@prompt)
+    end
   end
 
   def show
@@ -47,7 +52,7 @@ class PostsController < ApplicationController
   def destroy
     @prompt = Prompt.find(params[:prompt_id])
     @post = Post.find(params[:id])
-    if @post.user === current.user
+    if @post.user === current_user
       @post.destroy
     else
       flash[:alert] = "Only the author of this post can delete!"

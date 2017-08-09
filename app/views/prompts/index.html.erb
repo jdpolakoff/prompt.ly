@@ -6,7 +6,17 @@
   <div class ="prompt_links">
 
     <img src ="<%= prompt.img_url %>" class="thumbnail"><br>
-    <%= link_to prompt.title, prompt_path(prompt)%>
+    <h3><%= link_to prompt.title, prompt_path(prompt)%></h3><br>
+
+    <%= link_to like_prompt_path(prompt), class: 'like', method: :put do %>
+     <div class="like_button"><%= image_tag "upvote.png"%></div><div class="like_number"><h2><%= prompt.get_upvotes.size %></h2></div>
+    <% end %>
+
+    <br>
+
+    <%= link_to unlike_prompt_path(prompt), class: 'like', method: :put do %>
+     <div class="unlike_button"><%= image_tag "downvote.png"%></div><div class="unlike_number"><h2><%= prompt.get_downvotes.size %></h2></div>
+    <% end %>
 
   </div>
 

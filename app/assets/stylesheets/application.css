@@ -143,22 +143,24 @@ header {
   background-size: cover;*/
   /*background-color: #edddbb;*/
   /*background-color: #e8ab27;*/
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  /*border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;*/
   min-height: 9%;
   z-index: 3;
-  margin-top: -60px
+  margin-top: -60px;
+  background-color: #ff115c;
+  margin-bottom: 2%
 
 }
 
-.prompt {
+.post_index {
 
   border: solid 1px black;
   border-style: dotted;
   border-radius: 10px;
+  padding: 1%
 
 }
-
 
 footer {
 
@@ -184,7 +186,7 @@ footer {
 .notice, .alert {
 
   font-size: 20px;
-  color: white;
+  color: black;
 
 }
 
@@ -307,16 +309,25 @@ footer {
 
 .prompt {
 
-  width: 50%;
+  width: 80%;
   margin: 0 auto;
+  border: solid 1px black;
+  border-style: dotted;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 
-}
+  }
+
 
 .welcome_img {
 
   height: 300px;
   width: 300px;
   border-radius:300px;
+  background-image: url("https://static.pexels.com/photos/163059/letters-leave-pen-parking-ticket-163059.jpeg");
+  background-size: cover;
+  background-position: center;
 
 }
 
@@ -324,7 +335,7 @@ textarea#post_body{
 
   height: 100px;
   width: 400px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   outline-width: 0;
   text-align: center
 
@@ -335,7 +346,7 @@ textarea#comment_comment{
 
   height: 50px;
   width: 350px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   outline-width: 0;
   text-align: center
 
@@ -345,19 +356,44 @@ textarea#prompt_prompt{
 
   height: 150px;
   width: 350px;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   outline-width: 0;
   text-align: center
 
 }
 
+.like {
 
+  height: 5px;
+
+}
+
+.like_button {
+
+  height: 30px;
+  margin-top: -30px;
+
+}
+
+.unlike_button {
+
+  height: 20%;
+  margin-top: -35px;
+
+}
+
+.unlike_number {
+
+  margin-top: -23px
+
+}
 input {
 
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   outline-width: 0;
   font-family: 'Inconsolata', monospace;
   text-align: center;
+  border: solid 1px black;
 
 }
 
@@ -388,9 +424,9 @@ input#prompt_img_url {
 
 .thumbnail {
 
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
 
 }
 

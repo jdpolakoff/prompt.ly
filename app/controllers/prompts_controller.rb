@@ -1,7 +1,7 @@
 class PromptsController < ApplicationController
 
   def index
-    @prompts = Prompt.all
+    @prompts = Prompt.all.order(:cached_votes_score => :desc)
   end
 
   def show
@@ -45,6 +45,18 @@ class PromptsController < ApplicationController
       flash[:alert] = "Only the author of this post can delete!"
       redirect_to prompt_path(@prompt)
     end
+    redirect_to prompts_path
+  end
+
+  def upvote
+    @prompt = Prompt.find(params[:id])
+    @prompt.upvote_from current_user
+    redirect_to prompts_path
+  end
+
+  def downvote
+    @prompt = Prompt.find(params[:id])
+    @prompt.downvote_from current_user
     redirect_to prompts_path
   end
 
