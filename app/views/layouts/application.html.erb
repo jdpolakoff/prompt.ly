@@ -21,9 +21,9 @@
           <% else %>
             <div class ="header_h3"><h3><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></h3></div>
             <p style="float:right; margin-right: 5px; color: black">Currently logged in as:<br> <%= current_user.email %></p>
-            <p class="notice"><%= notice %></p>
-            <p class="alert"><%= alert %></p>
           <% end %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
         </header>
           <%= yield %>
         <!-- <footer>

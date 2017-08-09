@@ -1,8 +1,8 @@
 <h1>Welcome to prompt.ly</h1>
 
 <div class ="welcome_img">
-  
+
 </div>
 
-
 <h2> Your prompt is: <%=link_to @prompt.title, prompt_path(@prompt), class: 'welcome_text' %> </h2>
+<div class = "prompt_show"><h3><%= link_to "Next!", prompt_path(@random_prompt) %></h4></div>

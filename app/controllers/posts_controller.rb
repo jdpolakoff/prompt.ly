@@ -62,14 +62,24 @@ class PostsController < ApplicationController
 
   def upvote
     @post = Post.find(params[:id])
+    if user_signed_in?
     @post.upvote_from current_user
     redirect_back(fallback_location: root_path)
+    else
+    flash[:alert] = "You must be signed in to upvote."
+    redirect_back(fallback_location: root_path)
+  end
   end
 
   def downvote
     @post = Post.find(params[:id])
+    if user_signed_in?
     @post.downvote_from current_user
     redirect_back(fallback_location: root_path)
+    else
+      flash[:alert] = "You must be signed in to downvote."
+      redirect_back(fallback_location: root_path)
+    end 
   end
 
   private
