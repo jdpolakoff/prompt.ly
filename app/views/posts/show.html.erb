@@ -1,4 +1,4 @@
-<h2> Comment on this post for <%= link_to @prompt.title, prompt_path(@prompt), class: "welcome_text" %> </h2>
+<h2> Comment on this story entry for <%= link_to @prompt.title, prompt_path(@prompt), class: "welcome_text" %> </h2>
 
 <div class="post_title_body" style="background-image: url(<%= @prompt.img_url %>); background-size: cover">
 
@@ -37,7 +37,7 @@
 
     <div class ="all_comment">
 
-        <p class ="comment_time" style ="background-image: url('https://static.pexels.com/photos/5412/water-blue-ocean.jpg'); color: white"> Posted at: <%= comment.created_at %></p>
+        <p class ="comment_time"> Posted at: <%= comment.created_at %></p>
 
         <p><%= comment.comment %><br></p>
 

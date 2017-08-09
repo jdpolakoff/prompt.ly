@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div class="page_wrap">
         <header>
             <div class ="header_h3"><h3><%= link_to "Home", root_path %> </h3></div>
             <div class ="header_h3"><h3> <%= link_to "All Prompts", prompts_path %> </h3></div>
@@ -23,13 +24,10 @@
             <p class="alert"><%= alert %></p>
           <% end %>
         </header>
-        <div class="page_wrap">
           <%= yield %>
-        </div>
-
-        <!-- <footer>
+        <footer>
           <div class ="header_h3"><h3> Created by Prompt.ly Enterprises LLC </h3></div>
-        </footer> -->
-
+        </footer>
+    </div>
   </body>
 </html>
