@@ -1,5 +1,8 @@
 class PromptsController < ApplicationController
 
+  before_action :authenticate_user!, :except => [:show, :index]
+
+
   def index
     @prompts = Prompt.all.order(:cached_votes_score => :desc)
   end

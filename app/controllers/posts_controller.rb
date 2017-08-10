@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+  before_action :authenticate_user!, :except => [:show, :index]
+
+
   def index
     @prompt = Prompt.find(params[:prompt_id])
     @posts = @prompt.posts.all.order(:cached_votes_score => :desc)
@@ -79,7 +82,7 @@ class PostsController < ApplicationController
     else
       flash[:alert] = "You must be signed in to downvote."
       redirect_back(fallback_location: root_path)
-    end 
+    end
   end
 
   private
