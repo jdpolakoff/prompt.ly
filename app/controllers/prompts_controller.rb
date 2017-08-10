@@ -10,7 +10,12 @@ class PromptsController < ApplicationController
   end
 
   def new
+    if user_signed_in?
     @prompt = Prompt.new
+    else
+      flash[:alert] = "You must be signed in to create a prompt."
+      redirect_to new_user_session_path
+    end
   end
 
   def create
@@ -61,7 +66,7 @@ class PromptsController < ApplicationController
     else
       flash[:alert] = "You must be signed in to upvote."
       redirect_back(fallback_location: root_path)
-    end 
+    end
   end
 
   def downvote
