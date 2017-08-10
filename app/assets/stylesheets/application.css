@@ -364,8 +364,7 @@ label {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-
+  
   }
 
   /*.prompt:hover {
