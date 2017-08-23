@@ -20,3 +20,6 @@ breathless = Prompt.create(title: "Breathless", prompt: "Scampering through the 
 magic = Prompt.create(title: "Magic", prompt: "A street magician takes away your ability to speak. Then he disappears, too.", img_url: "https://static.pexels.com/photos/236243/pexels-photo-236243.jpeg", user: joey)
 skyscraper = Prompt.create(title: "Skyscraper", prompt: "To make your wish come true, you must take a massive leap of faith.", img_url: "https://static.pexels.com/photos/380283/pexels-photo-380283.jpeg", user: joey)
 underwater_surprise = Prompt.create(title: "Underwater Surprise", prompt: "As you surface from a scuba dive, you see a ticker attached to your boat with a minute left.", img_url: "https://static.pexels.com/photos/71276/diver-diving-swimming-sea-71276.jpeg", user: joey)
+
+# perhaps add a handful of posts / comments to seed data to demonstrate their
+# purpose in the app 

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :prompts do
     resources :posts
-    end
+  end
 
   resources :prompts do
     member do
@@ -23,8 +23,9 @@ Rails.application.routes.draw do
     end
   end
 
-    resources :posts do
-      resources :comments
-    end
+  resources :posts do
+    resources :comments
+  end
+  # try to stay consistent with indentations
 
 end

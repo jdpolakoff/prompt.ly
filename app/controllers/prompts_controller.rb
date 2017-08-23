@@ -14,21 +14,22 @@ class PromptsController < ApplicationController
 
   def new
     if user_signed_in?
-    @prompt = Prompt.new
+      @prompt = Prompt.new
     else
       flash[:alert] = "You must be signed in to create a prompt."
       redirect_to new_user_session_path
     end
+    # Isn't the above logic redundant of the `before_action :authenticate_user!`
   end
 
   def create
     if user_signed_in?
-    @prompt = Prompt.create(prompt_params.merge(user: current_user))
-    redirect_to prompts_path
+      @prompt = Prompt.create(prompt_params.merge(user: current_user))
+      redirect_to prompts_path
     else
-    flash[:alert] = "Please sign in to create a prompt."
-    redirect_to prompts_path
-  end
+      flash[:alert] = "Please sign in to create a prompt."
+      redirect_to prompts_path
+    end
   end
 
   def edit
@@ -64,8 +65,8 @@ class PromptsController < ApplicationController
   def upvote
     @prompt = Prompt.find(params[:id])
     if user_signed_in?
-    @prompt.upvote_from current_user
-    redirect_back(fallback_location: root_path)
+      @prompt.upvote_from current_user
+      redirect_back(fallback_location: root_path)
     else
       flash[:alert] = "You must be signed in to upvote."
       redirect_back(fallback_location: root_path)
@@ -75,8 +76,8 @@ class PromptsController < ApplicationController
   def downvote
     @prompt = Prompt.find(params[:id])
     if user_signed_in?
-    @prompt.downvote_from current_user
-    redirect_back(fallback_location: root_path)
+      @prompt.downvote_from current_user
+      redirect_back(fallback_location: root_path)
     else
       flash[:alert] = "You must be signed in to downvote."
       redirect_back(fallback_location: root_path)

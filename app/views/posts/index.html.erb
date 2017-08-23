@@ -23,12 +23,13 @@
         <div class ="votes">
 
         <p class ="published_at"> Published by <%= post.user.email %> at <%= post.created_at %></p>
-
+        <%# Try to stay away from inline styling (when possible). Instead think about how you could
+        apply this styling via classes or selector rules in your stylesheets %>
         <p style ="font-size: 10"> <%= link_to "Comment on this post / View comments", prompt_post_path(@prompt, post), class: "welcome_text" %></p>
         <p style ="font-size: 10"><%= link_to "Edit or delete this post", edit_prompt_post_path(@prompt, post), class: "welcome_text" %></p>
 
         <%= link_to like_post_path(post), class: 'like', method: :put do %>
-        <%= image_tag "upvote.png"%><h4 style="margin-top: -1%; margin-bottom: -.5%"><%= post.get_upvotes.size %></h4>
+          <%= image_tag "upvote.png"%><h4 style="margin-top: -1%; margin-bottom: -.5%"><%= post.get_upvotes.size %></h4>
         <% end %>
 
 
