@@ -1,6 +1,6 @@
 # README
 
-* Prompt.ly is a full-stack application built in Rails with Ruby version 2.3.4.
+* Prompt.ly is a full-stack application built in Ruby on Rails.
 
 * The app makes use of several Ruby gems including Devise for user sign-ins and Acts_As_Votable for voting functionality.
 

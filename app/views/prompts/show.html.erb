@@ -16,15 +16,23 @@
 
   <div> <h3 style="margin-top: -1%"> <%= @prompt.prompt %> <br><br> - Submitted by <%= @prompt.user.email %> </h3></div>
 
-<nav class = "prompt_buttons">
+<nav class="prompt_buttons">
 
-  <div class = "prompt_show"><h3><%= link_to "Let's start writing!", new_prompt_post_path(@prompt) %></h4></div>
+  <div class="prompt_show"><h3><%= link_to "Let's start writing!", new_prompt_post_path(@prompt) %></h4></div>
+  <%# It looks like you are combinging h3's with h4's above %>
+  <div class="prompt_show"><h3><%= link_to "Next!", prompt_path(@random_prompt) %></h4></div>
 
-  <div class = "prompt_show"><h3><%= link_to "Next!", prompt_path(@random_prompt) %></h4></div>
+  <div class="prompt_show"><h3><%= link_to "Read all entries for this prompt.", prompt_posts_path(@prompt) %></h4></div>
 
-  <div class = "prompt_show"><h3><%= link_to "Read all entries for this prompt.", prompt_posts_path(@prompt) %></h4></div>
-
-  <div class = "prompt_show"><h3><%= link_to "Edit or delete this prompt.", edit_prompt_path(@prompt) %></h4></div>
+  <div class="prompt_show"><h3><%= link_to "Edit or delete this prompt.", edit_prompt_path(@prompt) %></h4></div>
+  <%# In HTML, no spaces around `=` and always use double quotations %>
+  <%# Perhaps think about how you could make all of these buttons of uniform size %>
+  <%# Also, if you wanted, you could make the entire area of the button clickable as a link. Ex: %>
+  <!-- <% link_to edit_prompt_path(@prompt) do  %>
+    <div class="prompt_show">
+      <h3>Edit or delete this prompt</h3>
+    </div>
+  <% end %> -->
 
 </nav>
 

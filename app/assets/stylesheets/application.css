@@ -16,6 +16,7 @@
 
 
  @import url('https://fonts.googleapis.com/css?family=Inconsolata');
+ /*Great job using @import*/
 
 
 html {
@@ -107,6 +108,11 @@ h3:hover {
   color: #ff115c
 
 }
+
+/*Some of these rules can be condensed. Ex:
+h1:hover, p:hover, h3:hover {
+  color: #ff115c;
+}*/
 
 header h3 {
 
@@ -484,6 +490,8 @@ input#post_title {
   font-size: 26px
 
 }
+/*Generally, ids dont need to be referenced within their element because they
+are inherently unique identifiers*/
 
 input#prompt_title {
 
@@ -607,3 +615,10 @@ input#user_email, input#user_password, input#user_password_confirmation {
   background-color: #ff115c;
 
 }
+
+/*Really good, well-formatted, and semantic styling here. Only major improvement
+would be to order your selectors uniformly. Common practice is to order in terms of
+specificity (ascending).
+- General element selectors first
+- Class selectors second
+- Id selectors third*/

@@ -7,6 +7,7 @@ end
 
 #acts as votable
 gem 'acts_as_votable', '~> 0.10.0'
+# good job finding and applying third-party gems
 #devise
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
